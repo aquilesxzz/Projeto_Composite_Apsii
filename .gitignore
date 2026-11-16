@@ -1,0 +1,10 @@
+# Arquivos compilados
+**/out/
+**/*.class
+
+# Dados gerados durante a execução
+**/dados.dat
+
+# Configurações locais do IntelliJ
+**/.idea/
+**/*.iml
