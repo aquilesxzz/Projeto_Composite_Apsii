@@ -86,17 +86,27 @@ Projeto_Composite_Apsii/
 ## Tecnologias
 
 - **Linguagem:** Java
+- **Versão recomendada:** JDK 11 ou superior
 - **Interface:** terminal/console
 - **Persistência:** serialização de objetos Java
 - **IDE utilizada no desenvolvimento:** IntelliJ IDEA
 
 ## Como executar
 
-É necessário ter o **JDK instalado**. O projeto pode ser compilado pelo terminal a partir da raiz do repositório.
+É necessário ter o **JDK 11 ou superior instalado**. Os comandos abaixo devem ser executados a partir da raiz do repositório.
 
-No Windows (Prompt de Comando) ou em um terminal com suporte aos comandos abaixo:
+### Windows (Prompt de Comando)
+
+~~~bat
+if not exist SistemaArquivosComposite\out mkdir SistemaArquivosComposite\out
+javac -d SistemaArquivosComposite\out SistemaArquivosComposite\src\*.java
+java -cp SistemaArquivosComposite\out Main
+~~~
+
+### Linux, macOS ou Git Bash
 
 ~~~bash
+mkdir -p SistemaArquivosComposite/out
 javac -d SistemaArquivosComposite/out SistemaArquivosComposite/src/*.java
 java -cp SistemaArquivosComposite/out Main
 ~~~
