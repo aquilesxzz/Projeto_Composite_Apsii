@@ -1,5 +1,5 @@
-
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 public class Pasta implements ElementoSistema {
@@ -54,10 +54,13 @@ public class Pasta implements ElementoSistema {
 
     public boolean remover(String nome) {
 
-        for (ElementoSistema elemento : elementos) {
+        Iterator<ElementoSistema> iterator = elementos.iterator();
+
+        while (iterator.hasNext()) {
+            ElementoSistema elemento = iterator.next();
 
             if (elemento.getNome().equalsIgnoreCase(nome)) {
-                elementos.remove(elemento);
+                iterator.remove();
                 return true;
             }
         }
