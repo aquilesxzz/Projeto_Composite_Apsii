@@ -1,4 +1,3 @@
-
 public class GerenciadorArquivos {
 
     private Pasta raiz;
@@ -27,11 +26,6 @@ public class GerenciadorArquivos {
     }
 
     public boolean removerElemento(String caminho, String nome) {
-
-        if (nome.equalsIgnoreCase(raiz.getNome())) {
-            throw new IllegalArgumentException(
-                    "A pasta raiz não pode ser removida.");
-        }
 
         Pasta destino = localizarPasta(caminho);
 
